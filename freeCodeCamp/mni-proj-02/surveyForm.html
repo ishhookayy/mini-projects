@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form method="post" id="survey-form">
+        <fieldset>
+            <label id="name-label">Name : <input type="text" id="name" placeholder="Enter Your Name" required /></label>
+            <label id="email-label">Email : <input type="email" id="email" placeholder="Enter Your Email"
+                    required /></label>
+            <label id="age-label">Age (optional): <input type="number" id="number" min="13" max="120"
+                    placeholder="Enter Your age"></label>
+            <label id="number-label">Enter Your Number : <input type="number" minlength="7" maxlength="15"
+                    id="number-label" required /></label>
+            <label>Which option best describes your current role?
+                <select id="dropdown" name="dropdown">
+                    <option value="">Select current role</option>
+                    <option value="1">Student</option>
+                    <option value="2">Full Time job</option>
+                    <option value="3">Full time learner</option>
+                    <option value="4">Prefer not to say</option>
+                </select>
+            </label>
+
+        </fieldset>
+        <fieldset>
+            <legend>Gender (required) :</legend>
+            <label><input class="inline" name="gender" value="male" type="radio" checked /> Male</label>
+            <label><input class="inline" name="gender" value="female" type="radio" /> Female</label>
+            <label><input class="inline" name="gender" value="others" type="radio" /> Others</label>
+        </fieldset>
+        <fieldset>
+            <legend>Would you recommend freeCodeCamp to a friend?</legend>
+            <label><input class="inline" name="help" value="definetly" type="radio" checked /> Definetly</label>
+            <label><input class="inline" name="help" value="maybe" type="radio" /> Maybe</label>
+            <label><input class="inline" name="help" value="notsure" type="radio" /> Not sure</label>
+        </fieldset>
+        <fieldset>
+            <label>What are the techologies you instreased?
+                <label><input type="checkbox" value="1" class="inline" /> Web Development</label>
+                <label><input type="checkbox" class="inline" value="2" /> Databases/SQL</label>
+                <label><input type="checkbox" class="inline" value="3" /> Full Stack Development</label>
+                <label><input type="checkbox" class="inline" value="4" /> DevOps</label>
+                <label><input type="checkbox" class="inline" value="5" /> UI/UX</label>
+                <label><input type="checkbox" class="inline" value="6" /> Data Science</label>
+                <label><input type="checkbox" class="inline" value="7" /> Machine Learning</label>
+                <label><input type="checkbox" class="inline" value="8" /> Artifical Intelligence</label>
+                <label><input type="checkbox" class="inline" value="9" /> Mobile Development</label>
+                <label><input type="checkbox" class="inline" value="10" /> Game Designer</label>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label>Any comments or suggestions<textarea row="3" cols="30"
+                    placeholder="Your feedbacks are welcomed!!"></textarea>
+            </label>
+        </fieldset>
+
+        <input id="submit" type="submit" value="submit" />
+    </form>
+
+</body>
+
+</html>

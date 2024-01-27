@@ -1,0 +1,50 @@
+body{
+    background-color:gainsboro;
+}
+#img-div{
+    background-color: antiquewhite;
+    margin: 5px auto;
+    justify-content: center;
+}
+#img{
+    max-width: fit-content;
+    display: block;
+    height:fit-content;
+    margin: 10px auto;
+    padding-top: 3em;
+}
+#main{
+    max-width: 80%;
+    justify-content: center;
+    border: 10px auto;
+    padding: 5em ;
+    margin: auto;
+}
+#title{
+    text-align: center;
+}
+#img-caption{
+    text-align: center;
+
+}
+#tribute-info{
+    padding-left:1em;
+    padding-right: 1em;
+}
+h3{
+    padding-left: 1em;
+}
+#vid{
+    display: flex;
+    width: 95%;
+    height: 450px;
+    align-content: center;
+    padding-left: 30px;
+    padding-bottom: 30px;
+
+}
+footer{
+    text-align: center;
+    font-size: 18px;
+    color: blue ;
+}

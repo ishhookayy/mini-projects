@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    #in,
+    #out,
+    #btn {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    button {
+        background-color: green;
+        color: aliceblue;
+        font-size: 12px;
+        text-align: center;
+        width: 100px;
+        height: 30px;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <h1>STUDENT FORM</h1>
+
+    <div id="in">
+        <table border="10" id="input-box">
+
+            <tr>
+                <th>Name</th>
+                <td><input id="name" type="text" required /></td>
+            </tr>
+
+            <tr>
+                <th>Age</th>
+                <td><input id="age" type="number" min="15" max="21" required /></td>
+            </tr>
+
+            <tr>
+                <th>Gender</th>
+                <td>
+                    <input type="radio" value="Male" name="gender" required /> Male
+                    <input type="radio" value="Female" name="gender" /> Female
+                </td>
+            </tr>
+
+            <tr>
+                <th>Course</th>
+                <td>
+                    <select id="course">
+                        <option>JavaScript</option>
+                        <option>Html</option>
+                        <option>Css</option>
+                        <option>Java</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Email</th>
+                <td><input id="mail" type="email" required /></td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="btn">
+        <button onclick="add()">Save</button>
+    </div>
+    <div id="out">
+        <table border="10" id="output-box">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+
+    var in_box = document.getElementById('input-box');
+    var out_box = document.getElementById('output-box');
+
+    function add() {
+
+        var name = document.getElementById('name').value;
+        var age = document.getElementById('age').value;
+        var gender = document.querySelector('input[name="gender"]:checked').value;
+        var course = document.getElementById('course').value;
+        var email = document.getElementById('mail').value;
+
+        var row = document.createElement('tr');//<tr></tr>
+
+        var t1 = document.createElement('td');//<td></td>
+        t1.textContent = name;
+        row.insertAdjacentElement("beforeend", t1);
+
+        var t2 = document.createElement('td');//<td></td>
+        t2.textContent = age;
+        row.insertAdjacentElement("beforeend", t2);
+
+        var t3 = document.createElement('td');//<td></td>
+        t3.textContent = gender;
+        row.insertAdjacentElement("beforeend", t3);
+
+        var t4 = document.createElement('td');//<td></td>
+        t4.textContent = course;
+        row.insertAdjacentElement("beforeend", t4);
+
+        var t5 = document.createElement('td');//<td></td>
+        t5.textContent = email;
+        row.insertAdjacentElement("beforeend", t5);
+
+        var del = document.createElement('button');//<button></button>
+        del.textContent = "Delete";
+        del.style.color = "white";
+        del.style.backgroundColor = "red";
+        del.onclick = deleteElement;
+
+        row.insertAdjacentElement("beforeend", del);
+
+        out_box.append(row);
+
+
+    }
+
+    function deleteElement() {
+        var row = this.parentElement;
+        row.remove();
+
+    }
+</script>
+
+</html>
